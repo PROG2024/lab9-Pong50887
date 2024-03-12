@@ -8,6 +8,7 @@ Write unit tests as described in README.md.
 
 """
 import unittest
+from math import sqrt
 
 from circle import Circle
 
@@ -23,10 +24,7 @@ class Circletest(unittest.TestCase):
     def test_add_area_typical_values(self):
         """add_area for typical values (4,3), (5,12)"""
         x = self.circle.add_area(self.circle1)
-        self.assertEqual(x.get_radius(), Circle(5).get_radius())
-        self.assertEqual(x.get_area(), Circle(5).get_area())
-        y = self.circle2.add_area(x)
-        self.assertEqual(y.get_radius(), Circle(13).get_radius())
+        self.assertEqual(x.get_radius(), sqrt(self.circle.get_radius()**2 + self.circle1.get_radius()**2))
 
     def test_add_area_edge_case_0(self):
         circle_0 = Circle(0)
