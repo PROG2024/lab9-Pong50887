@@ -11,7 +11,6 @@ import unittest
 
 from circle import Circle
 
-# TODO write 3 tests as described above
 
 class Circletest(unittest.TestCase):
 
@@ -42,4 +41,3 @@ class Circletest(unittest.TestCase):
             circle_neg = Circle(-1)
         with self.assertRaises(ValueError):
             circle_neg = Circle(-10)
-
