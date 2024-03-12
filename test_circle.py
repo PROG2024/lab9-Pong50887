@@ -25,6 +25,8 @@ class Circletest(unittest.TestCase):
         """add_area for typical values (4,3), (5,12)"""
         x = self.circle.add_area(self.circle1)
         self.assertEqual(x.get_radius(), sqrt(self.circle.get_radius()**2 + self.circle1.get_radius()**2))
+        y = self.circle2.add_area(x)
+        self.assertEqual()
 
     def test_add_area_edge_case_0(self):
         circle_0 = Circle(0)
