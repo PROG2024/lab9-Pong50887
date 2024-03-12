@@ -36,6 +36,10 @@ class Circletest(unittest.TestCase):
         self.assertEqual(x.get_area(), self.circle.get_area())
 
     def test_circle_raised_error(self):
+        with self.assertRaises(TypeError):
+            circle_no_attribute = Circle()
         with self.assertRaises(ValueError):
             circle_neg = Circle(-1)
-        circle_0 = Circle(1)
+        with self.assertRaises(ValueError):
+            circle_neg = Circle(-10)
+
