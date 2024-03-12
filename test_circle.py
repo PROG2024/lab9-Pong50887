@@ -9,7 +9,6 @@ Write unit tests as described in README.md.
 """
 import unittest
 from math import sqrt
-
 from circle import Circle
 
 
