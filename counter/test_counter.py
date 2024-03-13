@@ -7,3 +7,18 @@
 
    You can use pytest or unittest.
 """
+import unittest
+
+from counter import Counter
+
+
+class testCounter(unittest.TestCase):
+
+    def test_share_count(self):
+        counter = Counter()
+        self.assertEquals(counter.count, 0)
+        counter.increment()
+        counter.increment()
+        counter1 = Counter()
+        self.assertEquals(counter1.count, 1)
+        
